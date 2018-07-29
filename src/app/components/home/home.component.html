@@ -1,0 +1,33 @@
+<div class="main-container">
+  <div class="row"><!--  style="background: url('../../../assets/img/bit2.jpg')" -->
+   
+    <div class="col-sm-12 d-none d-md-block">
+      <app-slideshow></app-slideshow>   
+     
+    </div>
+    <!-- <div class="col-md-2 d-none d-lg-block">
+        <aside class="col-md-12 d-none d-md-block">
+            <span  class="badge badge-dark align-middle col-12"><h4>Categorias</h4></span>
+            <div class="list-group">
+              <button type="button" (click)="buscarCategoria('cartelera')" class="list-group-item btn btn-outline-primary">Cartelera</button>  
+              <button type="button" (click)="buscarCategoria('ficcion')" class="list-group-item btn btn-outline-primary">Ciencia Ficción</button>  
+              <button type="button" (click)="buscarCategoria('drama')" class="list-group-item btn btn-outline-primary">Drama</button>  
+              <button type="button" (click)="buscarCategoria('terror')" class="list-group-item btn btn-outline-primary">Terror</button>  
+            
+            </div>
+            <br>
+    
+          </aside>
+        
+    </div> -->
+  
+  </div>
+  <div class="row">
+    <hr>
+    <section class="col-md-12">
+       <app-populares *ngIf ="categoriaBuscar === ''"></app-populares>
+    </section>
+   
+  
+  </div>
+</div>

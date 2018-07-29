@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PeliculasService } from './services/peliculas.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+ /*  constructor(public peliculasServ: PeliculasService) {
+  peliculasServ.getPopulares().subscribe();
+  // peliculasServ.buscarPelicula('spiderman').subscribe();
+
+
+  } */
   title = 'app';
 }

@@ -1,0 +1,29 @@
+
+
+
+
+
+<div class="container animated fadeIn transparencia" style="background-color: black;"><!--  style="background: url('./../../../assets/img/bit3.jpg')" -->
+
+  <hr>
+    <div class="card-columns row animated fadeIn">
+      <div *ngFor="let item of items" class="card text-light bg-transparent" style="width: 14rem;">
+        <a [routerLink]="['/pelicula',item.id]">
+          <div class="container">
+            <div class="div-img hidden" >
+        <!-- <img class="card-img-bottom img" src= "http://image.tmdb.org/t/p/w300/{{item.poster_path}}" alt="Card image"> -->
+        <img class="card-img-bottom img" [src]= "item.poster_path | imagen" alt="Card image">
+        </div>
+          </div>
+      </a>
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">Valoración: <span class="badge badge-primary">{{item.vote_average}}</span></p>
+        </div>
+        <div class="card-footer">
+          {{item.release_date | date }}
+          <button (click)="verPelicula(item.id)" type="button" class=" btn btn-sm btn-danger"> Ver mas</button>
+        </div>
+      </div>
+      </div>
+  </div>

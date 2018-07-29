@@ -1,0 +1,38 @@
+<div *ngIf="pelicula.title" class="container transparencia" style="background-color:black;">
+<h2 class="text-light">{{pelicula.title}}</h2>
+<button onclick="javascript:window.history.back();" class="btn float-right btn-outline-success">Regresar</button>
+<br>
+<hr>
+  <div class="row">
+  <div class="col-sm-4">
+   
+      <div class="card border-dark animated fadeIn">
+      
+        <!-- <img class="card-img-bottom" src= "http://image.tmdb.org/t/p/w300/{{pelicula.poster_path}}" alt="Card image"> -->
+        <img class="card-img-bottom" [src]= "pelicula.poster_path | imagen" alt="Card image">
+    
+        <div class="card-body">
+          <h5 class="card-title">{{pelicula.title}}</h5>
+          <p class="card-text">
+            Valoración: <span class="badge badge-primary">{{pelicula.vote_average}}</span></p>
+        </div>
+        <div class="card-footer">
+          Popularidad: <span class="badge badge-danger badge-pill">{{pelicula.popularity}}</span>
+        </div>
+      </div>
+      </div>
+    
+    <div class="col-sm-8 text-justify text-light animated fadeIn">
+      <div class="row">
+        <div class="col-sm-12 d-none d-md-block">
+        <!-- <img class="img-center" src= "http://image.tmdb.org/t/p/w400/{{pelicula.backdrop_path}}" alt="Card image"> -->
+        <img class="img-center" [src]= "pelicula.backdrop_path | imagen" alt="Card image">
+        </div>
+      </div>
+      <div>
+      <h3 *ngIf ="pelicula.overview">Sinopsis:</h3>  
+      <p>{{pelicula.overview}}</p>
+    </div>
+    </div>
+  </div>
+</div>
